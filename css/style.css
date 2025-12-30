@@ -1,0 +1,537 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'BookkGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkGothic-Lt.woff2') format('woff2');
+     unicode-range: U+AC00-D7AF; 
+    font-weight: 300;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'BookkGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkGothic-Bd.woff2') format('woff2');
+     unicode-range: U+AC00-D7AF; 
+    font-weight: 700;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style: none;
+}
+body {
+    background-color: #0f0f0f;
+    font-family: 'BookkGothic';
+}
+
+/* header---- */
+header {
+    width: 100%;
+    height: 78px;
+    background-color: #fff;
+   font-family: "Montserrat", sans-serif;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 9;
+   transition: all 0.3s;
+   opacity: 0;
+
+}
+header.menu {
+    opacity: 1;
+
+}
+.hinner {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+header ul {
+    display: flex;
+    width: 25rem;
+    justify-content: space-between;
+}
+.hinner ul li {
+    text-decoration: underline;
+    font-size: 1.2rem;
+    cursor: pointer;
+    letter-spacing: -0.05rem;
+    font-weight: 500;
+
+}
+.hinner ul li:hover {
+    color: #9FD7FF;
+}
+
+
+/* -- main image */
+
+
+.hero {
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+.hero video {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+    opacity: 0.7;
+}
+.mtitle {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding-top: 3rem;
+    font-size: 2.2rem;
+}
+
+.hero img {
+    width: 75%;
+    position: absolute;
+    left: -20%;
+    top: 20%;
+}
+
+.hero .minfo {
+    text-align: right;
+    font-size: 1.8rem;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+.hero .minfo p {
+    padding-top: 1.5rem;
+}
+
+/* --진짜 메인 시작 */
+.minner {
+    width: 80%;
+    margin: 0 auto;
+}
+.track {
+    color: #FAF8F3;
+    font-family: "Montserrat", sans-serif;
+    padding: 18rem 0;
+}
+.track-inner {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.track .track-inner h1 {
+    font-size: 3rem;
+    display: inline-block;
+    margin-bottom: 3rem;
+
+}
+.track .track-inner .listwrap{
+    width: 100%;
+    margin: 0 auto;
+}
+.track .track-inner .listwrap .listitem a {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.track .track-inner .listwrap .listitem {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #fff;
+    
+}
+.track .track-inner .listwrap .listitem span {
+    font-size: 2.6rem;
+}
+.track .track-inner .listwrap .listitem img {
+    width: 3.5rem;
+    height: 3rem;
+    object-fit: contain;
+}
+
+/* --intro */
+.intro {
+    width: 100%;
+    color: #FAF8F3;
+}
+.intro-inner {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 6rem;
+}
+.intro-inner h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+     font-family: "Montserrat", sans-serif;
+}
+.intro-inner p {
+    font-size: 4rem;
+    font-weight: 700;
+    word-break: keep-all;
+}
+.intro-inner span {
+    font-size: 1.3rem;
+    line-height: 170%;
+    word-break: keep-all;
+    word-wrap: break-word;
+    white-space: normal;
+   display: block;
+   margin-top: 2rem;
+   
+}
+/* --about me */
+.about {
+    margin-top: 21rem;
+}
+.about-inner {
+    width: 90%;
+    margin: 0 auto;
+    color: #FAF8F3;
+}
+
+.about-inner h1 {
+    font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 3rem;
+}
+.aboutitem {
+    display: flex;
+    gap: 4rem;
+}
+.about-inner .aboutitem img {
+    width: 25%;
+    height: 30%;
+    object-fit: cover;
+    margin-top: 1rem;
+}
+
+.aboutitem .aboutinfo .name {
+    margin-bottom: 2rem;
+
+}
+.aboutitem .aboutinfo .name span:nth-child(1) {
+    font-size: 2.3rem;
+    font-weight: 600;
+}
+.aboutitem .aboutinfo .name span:nth-child(2){
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.characterwrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+   
+}
+.charac-box {
+
+    font-size: 1.2rem;
+    
+}
+.charac-box span {
+    padding-right: 0.5rem;
+}
+.charac-box p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.characterwrap .charac-box ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.characterwrap .two ul, .characterwrap .four ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.characterwrap .two ul li, .characterwrap .four ul li{
+    width: 50%;
+}
+.characterwrap .five {
+    grid-column: span 2;
+    font-size: 1.2rem;
+}
+.characterwrap .five li {
+    padding: 0.3rem 0;
+}
+.characterwrap .five span{
+    text-decoration: underline;
+
+}
+.characterwrap .five a {
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding: 0 1.6rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: 'BookkGothic';
+    width: 10rem;
+    text-align: center;
+    height: 2rem;
+    display: inline-block;
+}
+.characterwrap .five a:hover {
+background-color: #fff;
+color: #0f0f0f;
+}
+
+/* ---design */
+.design-inner {
+    width: 90%;
+    color: #FAF8F3;
+    margin: 0 auto;
+    padding-bottom: 20rem;
+}
+.design-inner .designtitle {
+    margin-top: 23rem;
+}
+.design-inner .designtitle h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-family: "Montserrat", sans-serif;
+}
+.design-inner .designinfo  > img, .coding-inner .codinginfo > img {
+    width: 40%;
+    animation: rotate 10s linear infinite;
+    border-radius: 50%;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.design-inner .designinfo  > img.point, .coding-inner .codinginfo > img.point {
+    cursor: pointer;
+}
+
+.design-inner .designinfo  > img.active, .coding-inner .codinginfo > img.activee {
+    animation: spin 1s alternate;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    
+    padding-left: 14rem;
+    margin-top: 1rem;
+    display: none;
+    cursor: pointer;
+}
+.detail.on {
+    display: block;
+}
+.detail img{
+    width: 2rem;
+    height: 1.5rem;
+    padding-right: 10px;
+}
+
+.detail span {
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.design-inner .designinfo, .coding-inner .codinginfo {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.design-inner .designinfo .designlistwrap, .coding-inner .codinginfo .codinglistwrap {
+    width: 60%;
+}
+.design-inner .designinfo .designlistwrap .designlist, .coding-inner .codinginfo .codinglistwrap .codinglist {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    border-bottom: 1px solid #FAF8F3;
+    padding: 1rem 0;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.design-inner .designinfo .designlistwrap .designlist span, .coding-inner .codinginfo .codinglistwrap .codinglist span {
+    font-size: 1.5rem;
+}
+.design-inner .designinfo .designlistwrap .designlist img, .coding-inner .codinginfo .codinglistwrap .codinglist img {
+    width: 3rem;
+    height: 2.5rem;
+    object-fit: contain;
+}
+
+
+/* ---Publishing */
+.coding-inner {
+    width: 90%;
+    margin: 0 auto;
+    color: #FAF8F3;
+    padding-bottom: 15rem;
+}
+.coding-title {
+    margin-bottom: 3rem;
+}
+.coding-title h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* ==마지막 */
+.thank {
+    width: 100%;
+}
+.thankinner {
+    width: 70%;
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif;
+    padding-top: 5rem;
+    padding-bottom: 8rem;
+}
+.thank h1 {
+    color: #FAF8F3;
+    font-size: 1.5rem;
+text-align-last: left;
+    font-weight: 500;
+}
+.thank .thankinner p {
+    color: #fff;
+}
+.thankinfo {
+  margin-top: 1rem;
+}
+/* ---- */
+.gotop {
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    position: fixed;
+    right: 3rem; bottom: 3.2rem;
+    border: 4px solid #9FD7FF;
+    border-radius: 50%;
+    opacity: 0.6;
+    transition: all 0.2s;
+}
+.gotop:hover {
+    opacity: 1;
+}
+/* .gotop:hover img{
+    display: none;
+} */
+.gotop span {
+    border-top: 4px solid #9FD7FF;
+    border-left: 4px solid #9fd7ff;
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 1.3rem;
+    left: 1rem;
+}
+/* .gotop img {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+} */
+
+.popup {
+    position: fixed;
+    top: 0; left: -100vw;
+    width: 100%;
+    height: 100vh;
+    background-color: #222;
+    padding: 10vh 10vw;
+    z-index: 10;
+    transition: all 0.5s;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.popup.pop {
+    left: 0;
+}
+.popup figure {
+    width: 70%;
+    max-width: 75rem;
+    object-fit: cover;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+}
+.popup figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.popup button {
+    border: none;
+    background-color: transparent;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    font-family: "Montserrat", sans-serif;
+    position: absolute;
+    right: 9rem;
+    top: 5rem;
+}
+.popup button:hover {
+    text-shadow: 1px 0 15px #9FD7FF;
+}
+.popup a {
+    color: #fff;
+    position: absolute;
+    right: 16rem;
+    top: 5rem;
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    display: none;
+}
+.popup a:hover {
+    text-shadow: 1px 0 15px #9FD7FF;
+}
+.popup a.gobtn {
+    display: block;
+}
+body.stopscroll {
+    overflow: hidden;
+    height: 100%;
+}

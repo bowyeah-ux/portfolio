@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+@media screen and (max-width: 1440px) {
+    html {
+        font-size: 14px;
+    }
+    .intro-inner {
+        padding-top: 5rem;
+    }
+    .track {
+        padding-top: 14rem;
+        padding-bottom: 20rem;
+    }
+    .aboutitem {
+        gap: 3rem;
+        width: 100%;
+    }
+    .about-inner .aboutitem img {
+        width: 30%;
+    }
+    .one li {
+        word-break: keep-all;
+    }
+    .four li {
+        padding: 0.3rem 0;
+    }
+     .two li {
+        padding: 0.3rem 0;
+        letter-spacing: -0.03rem;
+      }
+    .characterwrap {
+        gap: 2rem;
+    }
+    
+}
+
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 13px;
+    }
+    .mtitle {
+        font-size: 2rem;
+        width: 82%;
+    }
+    .hero img {
+        top: 23%
+    }
+    .hero .minfo {
+        bottom: 13%;
+    }
+    
+    .intro-inner img {
+        width: 100%;
+    }
+    .track {
+        padding-top: 14rem;
+        padding-bottom: 20rem;
+    }
+    .aboutitem {
+        gap: 3rem;
+        flex-direction: column;
+    }
+   
+    .charac-box p {
+        font-size: 1.5rem;
+    }
+    .two li {
+        padding: 0.5rem 0;
+      }
+   .four li {
+        padding: 0.5rem 0;
+    }
+    
+   
+   .design-inner .designinfo .designlistwrap .designlist span, .coding-inner .codinginfo .codinglistwrap .codinglist span {
+    font-size: 1.2rem;
+   }
+   .design-inner .designinfo .designlistwrap .designlist, .coding-inner .codinginfo .codinglistwrap .codinglist {
+    width: 94%;
+   }
+   
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+    
+   .track {
+        padding-top: 14rem;
+        padding-bottom: 20rem;
+    }
+    .hero img {
+        width: 80%;
+        left: 8%;
+        
+    }
+    .aboutitem {
+        flex-direction: column;
+    }
+    .about-inner .aboutitem img {
+        width: 100%;
+
+    }
+    .characterwrap {
+        display: block;
+
+    }
+    .charac-box {
+        margin-bottom: 2rem;
+    }
+    .two {
+        width: 60%;
+    }
+      .two li {
+        padding: 0.5rem 0;
+      }
+    .four {
+        width: 40%;
+    }
+    .four li {
+        padding: 0.5rem 0;
+    }
+    .designlist {
+        word-break: keep-all;
+    }
+    .gotop {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    html {
+        font-size: 11px;
+    }
+    .mtitle {
+     flex-direction: column;
+     gap: 1rem;
+
+
+    }
+    .hero img {
+        width: 100%;
+        left: 0;
+        top: 30%;
+    }
+    .hero .minfo {
+        bottom: 10%;
+    }
+    .hinner {
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+  
+    .hinner h1 {
+        font-size: 1.4rem;
+        margin-bottom: 0.7rem;
+    }
+    header ul {
+        width: 21rem;
+    }
+    .charac-box {
+        font-size: 1.2rem;
+    }
+    .design-inner .designinfo, .coding-inner .codinginfo {
+        flex-direction: column;
+        
+    }
+    .design-inner .designinfo .designlistwrap, .coding-inner .codinginfo .codinglistwrap {
+        width: 100%;
+    }
+    .design-inner .designinfo  > img, .coding-inner .codinginfo > img {
+        width: 90%;
+
+    }
+    .two {
+        width: 100%;
+    }
+    .four {
+        width: 70%;
+    }
+    .gotop {
+        right: 2rem;
+        width: 3rem;
+        height: 3rem;
+        border: 3px solid #9FD7FF;
+
+    }
+    .gotop span {
+        width: 1.2rem;
+        height: 1.2rem;
+        left: 0.6rem;
+        top: 0.8rem;
+        border-top: 3px solid #9FD7FF;
+    border-left: 3px solid #9fd7ff;
+    }
+    .popup {
+        left: -100%;
+    }
+    .popup figure {
+        padding-top: 2rem;
+        width: 90%;
+    }
+   
+   
+}
+
+@media screen and (max-width: 375px) {
+    html {
+        font-size: 10px;
+    }
+   .intro-inner span {
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: normal;
+   }
+   
+    
+}
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 9px;
+    }
+   
+
+}
