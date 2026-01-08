@@ -389,6 +389,12 @@ color: #0f0f0f;
 
 .design-inner .designinfo .designlistwrap .designlist span, .coding-inner .codinginfo .codinglistwrap .codinglist span {
     font-size: 1.5rem;
+    font-weight: 400;
+}
+.design-inner .designinfo .designlistwrap .designlist span.bold, .coding-inner .codinginfo .codinglistwrap .codinglist span.bold {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
 }
 .design-inner .designinfo .designlistwrap .designlist img, .coding-inner .codinginfo .codinglistwrap .codinglist img {
     width: 3rem;
@@ -426,12 +432,13 @@ color: #0f0f0f;
 }
 .thank h1 {
     color: #FAF8F3;
-    font-size: 1.5rem;
+    font-size: 3rem;
 text-align-last: left;
-    font-weight: 500;
+    font-weight: 700;
 }
 .thank .thankinner p {
     color: #fff;
+    font-size: 1.5rem;
 }
 .thankinfo {
   margin-top: 1rem;

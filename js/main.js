@@ -1,9 +1,9 @@
 $(function(){
     // design CD 이미지 변경
-    let cd = ['images/work_1.png', 'images/work_2.png', 'images/work_3.png', 'images/work_4.png', 'images/work_5.png']
+    let cd = ['images/work_1.png', 'images/work_2.png', 'images/work_3.png', 'images/work_4.png']
     const defaultImg = 'images/designCD.png'
     let timer
-    let codecd = ['images/coding_1.png', 'images/coding_2.png', 'images/coding_3.png', 'images/coding_4.png']
+    let codecd = ['images/coding_1.png', 'images/coding_2.png', 'images/coding_3.png', 'images/coding_4.png', 'images/work_5.png']
     const codingCD = 'images/publiCD.png'
     const pause = 'images/stopbutton.png'
     const play = 'images/playbutton.png'
@@ -44,6 +44,7 @@ $('.designlistwrap').mouseleave(function(){
             $('.designinfo > img').attr('src', defaultImg)
             $('.designlist img').attr('src', play)
             $('.design-inner .designinfo  > img').removeClass('point')
+            $('.designlist span').removeClass('bold')
 
         }
        
@@ -84,7 +85,9 @@ $('.codinglistwrap').mouseleave(function(){
             $('.codinginfo > img').attr('src', codingCD)
             $('.codinglist img').attr('src', play)
             $('.coding-inner .codinginfo  > img').removeClass('point')
+            $('.codinglist span').removeClass('bold')
         }
+
         
     }, 8000)
 
@@ -97,13 +100,13 @@ $('.codinglistwrap').mouseleave(function(){
 
 
 // --coding섹션 팝업 뜨기
-let copopImg = ['images/cjenm.png', 'images/socar.png', 'images/wips.png', 'images/privia.png']
+let copopImg = ['images/cjenm.png', 'images/socar.png', 'images/wips.png', 'images/privia.png', 'images/daeguredesign.jpg']
 
 $('.codinginfo > img').click(function(){
     let codecurrentImg = $(this).attr('src')
     let coLinks = ['https://bowyeah-ux.github.io/clone-coding_cj/', 'https://bowyeah-ux.github.io/clone-coding_socar/', 'https://bowyeah-ux.github.io/clone-coding_wips/'
-    , 'https://bowyeah-ux.github.io/teamcoding_privia/']
-    let coOriginLinks = ['https://www.cjenm.com/ko/', 'https://www.socar.kr/', 'https://www.wipscorp.com/', 'https://www.priviatravel.com/']
+    , 'https://bowyeah-ux.github.io/teamcoding_privia/', 'https://bowyeah-ux.github.io/redesign_daeguviennale/']
+    let coOriginLinks = ['https://www.cjenm.com/ko/', 'https://www.socar.kr/', 'https://www.wipscorp.com/', 'https://www.priviatravel.com/', 'https://www.daeguphoto.com/index.php']
 
     if(codecurrentImg !== codingCD){
         let codepopIdx = codecd.indexOf(codecurrentImg)
@@ -177,7 +180,7 @@ $('.listitem a').click(function(e){
 
 //list 클릭하면 popup뜨기
 
-let popImage = ['images/banner1.jpg', 'images/banner2.png', 'images/banner3.jpg', 'images/catdetailpage.jpg', 'images/daeguredesign.jpg']
+let popImage = ['images/banner1.jpg', 'images/banner2.png', 'images/banner3.jpg', 'images/catdetailpage.jpg']
 
 $('.designinfo > img').click(function(){
     let currentPop = $(this).attr('src')
@@ -191,14 +194,14 @@ $('.designinfo > img').click(function(){
         
 
 
-        if(popIdx === cd.length - 1){
-            $('.popup .originbtn').attr('href', 'https://www.daeguphoto.com/index.php' )
-            $('.popup .mycodingbtn').attr('href', 'https://bowyeah-ux.github.io/redesign_daeguviennale/')
-            $('.popup .mycodingbtn, .popup .originbtn').show()
+        // if(popIdx === cd.length - 1){
+        //     $('.popup .originbtn').attr('href', 'https://www.daeguphoto.com/index.php' )
+        //     $('.popup .mycodingbtn').attr('href', 'https://bowyeah-ux.github.io/redesign_daeguviennale/')
+        //     $('.popup .mycodingbtn, .popup .originbtn').show()
 
-        }else{
-            $('.popup .mycodingbtn, .popup .originbtn').hide()
-        }
+        // }else{
+        //     $('.popup .mycodingbtn, .popup .originbtn').hide()
+        // }
     }
 
 
@@ -228,7 +231,11 @@ $('.popup button').click(function(){
 })
 
 
+$('.designlist, .codinglist').click(function(){
+    $(this).find('span').addClass('bold')
+    $(this).siblings().find('span').removeClass('bold')
 
+})
 
 
 
