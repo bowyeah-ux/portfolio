@@ -95,24 +95,30 @@ $('.codinglistwrap').mouseleave(function(){
 })
 
 
-$('.codinginfo > img').each(function(index, el2){
-    $(el2).click(function(){
-        let codecurrentImg = $(this).attr('src')
-        let codingUrls = ['']
 
-        if(codecurrentImg !== codingCD){
-            let idx3 = codecd.indexOf(codecurrentImg)
-            if(idx3 >= 0 && idx3 <=2){
-                window.open(codingUrls[idx3], '_blank')
-            }else if(idx3 === 3){
-                $('.popup figure img').attr('src', Popco)
-                $('.popup').addClass('pop')
-                $('body').addClass('stopscroll')
-                $('.popup a').addClass('gobtn')
-            }
-        }
-    })
+// --coding섹션 팝업 뜨기
+let copopImg = ['images/cjenm.png', 'images/socar.png', 'images/wips.png', 'images/privia.png']
+
+$('.codinginfo > img').click(function(){
+    let codecurrentImg = $(this).attr('src')
+    let coLinks = ['https://bowyeah-ux.github.io/clone-coding_cj/', 'https://bowyeah-ux.github.io/clone-coding_socar/', 'https://bowyeah-ux.github.io/clone-coding_wips/'
+    , 'https://bowyeah-ux.github.io/teamcoding_privia/']
+    let coOriginLinks = ['https://www.cjenm.com/ko/', 'https://www.socar.kr/', 'https://www.wipscorp.com/', 'https://www.priviatravel.com/']
+
+    if(codecurrentImg !== codingCD){
+        let codepopIdx = codecd.indexOf(codecurrentImg)
+
+        $('.popup figure img').attr('src', copopImg[codepopIdx])
+        $('.popup').addClass('pop')
+        $('body').addClass('stopscroll')
+
+        // original 링크 연결
+        $('.popup .originbtn').attr('href', coOriginLinks[codepopIdx]).css('display', 'inline-block')
+        //coding글자 누르면 링크 연결되기
+        $('.popup .mycodingbtn').attr('href', coLinks[codepopIdx]).css('display', 'inline-block')
+    }
 })
+
 
 // .hero 끝날 때 헤더 나오기
 let pageof = $('.track-inner').offset().top + $('.track-inner').outerHeight()
@@ -171,19 +177,33 @@ $('.listitem a').click(function(e){
 
 //list 클릭하면 popup뜨기
 
-let popImage = ['images/banner1.png', 'images/banner2.png', 'images/banner3.jpg', 'images/catdetailpage.jpg', 'images/daeguredesign.jpg']
+let popImage = ['images/banner1.jpg', 'images/banner2.png', 'images/banner3.jpg', 'images/catdetailpage.jpg', 'images/daeguredesign.jpg']
 
 $('.designinfo > img').click(function(){
     let currentPop = $(this).attr('src')
 
     if(currentPop !== defaultImg){
         let popIdx = cd.indexOf(currentPop)
+        
         $('.popup figure img').attr('src', popImage[popIdx])
         $('.popup').addClass('pop')
-    }else{
-        console.log('기본 이미지 상태입니다.')
+
+        
+
+
+        if(popIdx === cd.length - 1){
+            $('.popup .originbtn').attr('href', 'https://www.daeguphoto.com/index.php' )
+            $('.popup .mycodingbtn').attr('href', 'https://bowyeah-ux.github.io/redesign_daeguviennale/')
+            $('.popup .mycodingbtn, .popup .originbtn').show()
+
+        }else{
+            $('.popup .mycodingbtn, .popup .originbtn').hide()
+        }
     }
-})
+
+
+   
+}) 
 
 
 
@@ -203,6 +223,7 @@ $('.designinfo > img').each(function(index, el){
 $('.popup button').click(function(){
     $('.popup').removeClass('pop')
      $('body').removeClass('stopscroll')
+     $('.popup .originbtn, .popup .mycodingbtn').hide()
 
 })
 

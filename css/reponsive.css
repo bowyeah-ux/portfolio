@@ -71,6 +71,7 @@
         padding: 0.5rem 0;
     }
     
+
    
    .design-inner .designinfo .designlistwrap .designlist span, .coding-inner .codinginfo .codinglistwrap .codinglist span {
     font-size: 1.2rem;
@@ -78,6 +79,15 @@
    .design-inner .designinfo .designlistwrap .designlist, .coding-inner .codinginfo .codinglistwrap .codinglist {
     width: 94%;
    }
+
+   .popup button {
+    right: 4rem;
+   }
+   .popup .links {
+    right: 4rem;
+   }
+
+   
    
 }
 
@@ -202,7 +212,14 @@
         padding-top: 2rem;
         width: 90%;
     }
-   
+    .popup button {
+        right: 8rem;
+    }
+    .popup .links {
+        flex-direction: row;
+        top: 5rem;
+        right: 15rem;
+    }
    
 }
 
@@ -215,6 +232,14 @@
     word-wrap: break-word;
     white-space: normal;
    }
+   .popup button {
+        right: 7rem;
+    }
+    .popup .links {
+        flex-direction: row;
+        top: 5rem;
+        right: 14rem;
+    }
    
     
 }
