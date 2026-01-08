@@ -180,7 +180,7 @@ $('.listitem a').click(function(e){
 
 //list 클릭하면 popup뜨기
 
-let popImage = ['images/banner1.jpg', 'images/banner2.png', 'images/banner3.jpg', 'images/catdetailpage.jpg']
+let popImage = ['images/banner1.png', 'images/banner2.png', 'images/banner3.jpg', 'images/catdetailpage.jpg']
 
 $('.designinfo > img').click(function(){
     let currentPop = $(this).attr('src')
