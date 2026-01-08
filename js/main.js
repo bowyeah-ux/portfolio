@@ -100,7 +100,7 @@ $('.codinglistwrap').mouseleave(function(){
 
 
 // --coding섹션 팝업 뜨기
-let copopImg = ['images/cjenm.png', 'images/socar.png', 'images/wips.png', 'images/privia.png', 'images/daeguredesign.jpg']
+let copopImg = ['images/cjenm.png', 'images/socar.png', 'images/wips.png', 'images/priviaprocess.jpg', 'images/daeguredesign.jpg']
 
 $('.codinginfo > img').click(function(){
     let codecurrentImg = $(this).attr('src')
